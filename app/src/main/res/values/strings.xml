@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AppOscar2020</string>
+    <string name="nome_cadastro">Cadastro de filme</string>
+    <string name="nome_filme">Nome</string>
+    <string name="nome_diretor">Diretor</string>
+    <string name="nome_categoria">Categoria</string>
+    <string name="button_cadastro">Cadastrar</string>
+    <string name="button_indicados">Indicados 2020</string>
 </resources>

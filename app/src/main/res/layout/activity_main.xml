@@ -7,12 +7,106 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/nome_cadastro"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/textViewNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="@string/nome_filme"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/textCadastro"
+        app:layout_constraintStart_toStartOf="@+id/textCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/textCadastro" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:inputType="text"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNome"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/textViewNome"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNome" />
+
+    <TextView
+        android:id="@+id/textViewDiretor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/nome_diretor"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNome"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/editTextNome"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
+
+    <EditText
+        android:id="@+id/editTextDiretor"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDiretor"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/textViewDiretor"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDiretor" />
+
+    <TextView
+        android:id="@+id/textViewCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/nome_categoria"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/editTextDiretor"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/editTextDiretor"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDiretor" />
+
+    <EditText
+        android:id="@+id/editTextCategoria"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCategoria"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/textViewCategoria"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCategoria" />
+
+    <Button
+        android:id="@+id/buttonCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="@string/button_cadastro"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCategoria"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/editTextCategoria"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCategoria" />
+
+    <Button
+        android:id="@+id/buttonIndicados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/button_indicados"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCadastrar"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/buttonCadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCadastrar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
