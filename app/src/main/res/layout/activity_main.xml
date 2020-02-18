@@ -35,7 +35,6 @@
         android:layout_width="180dp"
         android:layout_height="45dp"
         android:layout_marginTop="28dp"
-        android:inputType="text"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="@+id/textViewNome"
         app:layout_constraintHorizontal_bias="0.503"

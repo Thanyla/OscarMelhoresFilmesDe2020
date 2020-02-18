@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.apposcar2020.model.Filme;
+import com.example.apposcar2020.models.Filme;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -29,18 +29,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
-        editTextNome.findViewById(R.id.editTextNome);
-        editTextDiretor.findViewById(R.id.editTextDiretor);
-        editTextCategoria.findViewById(R.id.editTextCategoria);
-        buttonCadastrar.findViewById(R.id.buttonCadastrar);
-        buttonIndicados.findViewById(R.id.buttonIndicados);
+        editTextNome = findViewById(R.id.editTextNome);
+        editTextDiretor = findViewById(R.id.editTextDiretor);
+        editTextCategoria = findViewById(R.id.editTextCategoria);
+        buttonCadastrar = findViewById(R.id.buttonCadastrar);
+        buttonIndicados = findViewById(R.id.buttonIndicados);
 
         sharedPreferences = getSharedPreferences("jsonFilmes", Context.MODE_PRIVATE);
         filmes = new ArrayList<>();
         buttonCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Não fiz os set para testar se funciona sem
                 String nome = editTextNome.getText().toString();
                 String diretor = editTextDiretor.getText().toString();
                 String categoria = editTextCategoria.getText().toString();
@@ -64,9 +63,10 @@ public class MainActivity extends AppCompatActivity {
                     Gson gson = new Gson();
                     String stringJson = gson.toJson(filmes);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("json", stringJson);
                     editor.commit();
 
-                    Intent intent = new Intent(getApplicationContext(), Indicados.class);
+                    Intent intent = new Intent(getApplicationContext(), ActivityIndicados.class);
                     startActivity(intent);
                     finish();
                 }else

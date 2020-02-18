@@ -1,4 +1,4 @@
-package com.example.apposcar2020.model;
+package com.example.apposcar2020.models;
 
 public class Filme {
     private String nome;
@@ -13,6 +13,8 @@ public class Filme {
                 ", categoria='" + categoria + '\'' +
                 '}';
     }
+
+    public Filme(){}
 
     public Filme(String nome, String diretor, String categoria) {
         this.nome = nome;
